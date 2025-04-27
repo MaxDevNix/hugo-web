@@ -7,7 +7,7 @@ draft = true
 
 NTFS, officially NT File System but commonly called New Technology File System,
 is a Microsoft filesystem that has been the default on windows since Windows NT 3.1.
-Support for NTFS has been incorporated into the Linux kernel in version X.X.X in YYYY.
+Support for NTFS has been incorporated into the Linux kernel in version 5.15.0 in 31.10.2021.
 
 <!--more-->
 

@@ -6,7 +6,7 @@ title = "MaxDev's Blog"
 theme = "ananke"
 summaryLength = "10"
 [pagination]
-  disableAliases = false
+  disableAliases = true
   pagerSize = 10
   path = 'page'
 
