@@ -1,0 +1,49 @@
+baseURL = 'https://example.org/'
+# baseURL = 'https://maxdevnix.github.io'
+languageCode = 'en-us'
+title = "MaxDev's Blog"
+# theme = "lugo"
+theme = "ananke"
+summaryLength = "10"
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = 'page'
+
+[outputs]
+home = ["HTML", "AMP", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+hl_Lines = ""
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = false
+tabWidth = 8
+noClasses = false
+
+[params]
+subtitle = ""
+defaultTheme = "dark"
+search = true
+author = "MaxDevNix"
+description = "{desc}"
+mainSections = ["posts"]
+header_search_layout = "expanded"
+menu_align = "center"
+sidebar = "right"
+code_copy_button = true
+
+[params.contact]
+email = "maxik.falb@gmail.com"
+
+[build]
+[build.buildStats]
+disableClasses = false
+disableIDs = false
+disableTags = false
+enable = false

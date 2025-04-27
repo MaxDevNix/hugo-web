@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>PAVU Control Errors and Fixes | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="This is a guide to fix error when Pavucontrol is first started.">
+    <meta name="generator" content="Hugo 0.145.0">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    <meta name="author" content="MaxDevNix">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/pavu-control-errors-and-fixes/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/pavu-control-errors-and-fixes/">
+  <meta property="og:site_name" content="My New Hugo Site">
+  <meta property="og:title" content="PAVU Control Errors and Fixes">
+  <meta property="og:description" content="This is a guide to fix error when Pavucontrol is first started.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-17T07:51:26+01:00">
+    <meta property="article:modified_time" content="2025-03-17T07:51:26+01:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Problems">
+    <meta property="article:tag" content="PulseAudio">
+
+  <meta itemprop="name" content="PAVU Control Errors and Fixes">
+  <meta itemprop="description" content="This is a guide to fix error when Pavucontrol is first started.">
+  <meta itemprop="datePublished" content="2025-03-17T07:51:26+01:00">
+  <meta itemprop="dateModified" content="2025-03-17T07:51:26+01:00">
+  <meta itemprop="wordCount" content="125">
+  <meta itemprop="keywords" content="Linux,Problems,PulseAudio">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PAVU Control Errors and Fixes">
+  <meta name="twitter:description" content="This is a guide to fix error when Pavucontrol is first started.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">PAVU Control Errors and Fixes</h1>
+      
+      <p class="tracked"><strong>MaxDevNix</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-03-17T07:51:26+01:00">March 17, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>This is a guide to fix error when Pavucontrol is first started.</p>
+<h2 id="error">Error</h2>
+<ol>
+<li>Connection to PulseAudio failed
+Happens, when you install and first start up PAVUControl.</li>
+</ol>
+<h2 id="fixes">Fixes</h2>
+<ul>
+<li>
+<p>Restart PulseAudio</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">pulseaudio -k ; pulseaudio --start
+</span></span></span></code></pre></div><p>If this doesn&rsquo;t work, run this command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">pulseaudio --check ; pulseaudio -D
+</span></span></span></code></pre></div><p>If this doesn&rsquo;t work, then:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-console" data-lang="console"><span class="line"><span class="cl"><span class="go">pulseaudio -k ; pulseaudio -v ; sudo reboot
+</span></span></span></code></pre></div></li>
+</ul>
+<h2 id="command-cheatsheet">Command Cheatsheet</h2>
+<ul>
+<li><code>pulseaudio --check</code> - checks if pulseaudio daemon is runnung and returns an exit code</li>
+<li><code>pulseaudio -D | --daemonize</code> - run in the background after startup</li>
+<li><code>pulseaudio -k | --kill</code> - kill a running daemon</li>
+<li><code>pulseaudio --start</code> - start the pulseaudio daemon</li>
+<li><code>pulseaudio -v | --verbose</code> - increase the verbosity level</li>
+<li><code>reboot</code> - reboots the system</li>
+<li><code>sudo</code> - executes the command after with elevated privilages</li>
+</ul><ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/problems/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Problems</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/pulseaudio/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">PulseAudio</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  My New Hugo Site 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

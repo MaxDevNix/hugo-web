@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Mar 2025 18:17:24 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 12 Mar 2025 18:17:24 +0100</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;h1 id=&#34;hello-im-max-and-this-is-my-first-post-on-my-website&#34;&gt;Hello, I&amp;rsquo;m Max and this is my first post on my website.&lt;/h1&gt;&#xA;&lt;p&gt;I plan on hosting this, at first, on github pages, and when i get my custom domain, i&amp;rsquo;ll transfer to cloudflare.&lt;bg&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

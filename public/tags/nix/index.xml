@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nix on MaxDev&#39;s Blog</title>
+    <link>http://localhost:1313/tags/nix/</link>
+    <description>Recent content in Nix on MaxDev&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Mar 2025 07:58:35 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/nix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nix Package Manager</title>
+      <link>http://localhost:1313/posts/nix-package-manager/</link>
+      <pubDate>Mon, 17 Mar 2025 07:58:35 +0100</pubDate>
+      <guid>http://localhost:1313/posts/nix-package-manager/</guid>
+      <description>&lt;!--This is a package manager with one of the largest repositories&#xA;(80 000+ packages), that can be installed on most distros.--&gt;&#xA;&lt;p&gt;This is a standalone package manager,&#xA;that, by default, is bundled with NixOS.&#xA;I learned about it from ChrisTitusTech&amp;rsquo;s&#xA;&lt;a href=&#34;https://youtube.com/watch?v=Ty8C2B910EI&#34;&gt;YouTube&lt;/a&gt; and&#xA;&lt;a href=&#34;https://christitus.com/nix-package-manager&#34;&gt;Vlog&lt;/a&gt;&#xA;It has one of the largest &lt;a href=&#34;https://github.com/nixos/nixpkgs&#34;&gt;repositories&lt;/a&gt;&#xA;(&lt;a href=&#34;https://repology.org/repository/nix_unstable&#34;&gt;120 000+ packages&lt;/a&gt;)&#xA;that has both free and open-source as well as proprietary software&#xA;that is pretty up to date.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

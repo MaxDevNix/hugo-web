@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Errors Fixes on MaxDev&#39;s Blog</title>
+    <link>http://localhost:1313/tags/errors-fixes/</link>
+    <description>Recent content in Errors Fixes on MaxDev&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Apr 2025 13:04:52 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/errors-fixes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Awesome WM</title>
+      <link>http://localhost:1313/posts/awesomewm/</link>
+      <pubDate>Thu, 10 Apr 2025 13:04:52 +0200</pubDate>
+      <guid>http://localhost:1313/posts/awesomewm/</guid>
+      <description>&lt;p&gt;Awesome Window Manager is a Window Manager for Linux-based systems,&#xA;based on DWM and configured in Lua,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NTFS File System</title>
+      <link>http://localhost:1313/posts/ntfs/</link>
+      <pubDate>Wed, 02 Apr 2025 10:36:37 +0200</pubDate>
+      <guid>http://localhost:1313/posts/ntfs/</guid>
+      <description>&lt;p&gt;NTFS, officially NT File System but commonly called New Technology File System,&#xA;is a Microsoft filesystem that has been the default on windows since Windows NT 3.1.&#xA;Support for NTFS has been incorporated into the Linux kernel in version X.X.X in YYYY.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nix Package Manager</title>
+      <link>http://localhost:1313/posts/nix-package-manager/</link>
+      <pubDate>Mon, 17 Mar 2025 07:58:35 +0100</pubDate>
+      <guid>http://localhost:1313/posts/nix-package-manager/</guid>
+      <description>&lt;!--This is a package manager with one of the largest repositories&#xA;(80 000+ packages), that can be installed on most distros.--&gt;&#xA;&lt;p&gt;This is a standalone package manager,&#xA;that, by default, is bundled with NixOS.&#xA;I learned about it from ChrisTitusTech&amp;rsquo;s&#xA;&lt;a href=&#34;https://youtube.com/watch?v=Ty8C2B910EI&#34;&gt;YouTube&lt;/a&gt; and&#xA;&lt;a href=&#34;https://christitus.com/nix-package-manager&#34;&gt;Vlog&lt;/a&gt;&#xA;It has one of the largest &lt;a href=&#34;https://github.com/nixos/nixpkgs&#34;&gt;repositories&lt;/a&gt;&#xA;(&lt;a href=&#34;https://repology.org/repository/nix_unstable&#34;&gt;120 000+ packages&lt;/a&gt;)&#xA;that has both free and open-source as well as proprietary software&#xA;that is pretty up to date.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PAVU Control</title>
+      <link>http://localhost:1313/posts/pavu-control/</link>
+      <pubDate>Mon, 17 Mar 2025 07:51:26 +0100</pubDate>
+      <guid>http://localhost:1313/posts/pavu-control/</guid>
+      <description>&lt;!--This is a guide to fix error when Pavucontrol is first started.--&gt;&#xA;&lt;p&gt;PAVU Control (PulseAudioVolume Control), is a GUI front-end utility for pulseaudio sound server/daemon.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

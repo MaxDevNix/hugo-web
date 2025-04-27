@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Nix Package Manager | MaxDev&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="
+This is a standalone package manager,
+that, by default, is bundled with NixOS.
+I learned about it from ChrisTitusTech&rsquo;s
+YouTube and
+Vlog
+It has one of the largest repositories
+(120 000&#43; packages)
+that has both free and open-source as well as proprietary software
+that is pretty up to date.">
+    <meta name="generator" content="Hugo 0.146.1">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    <meta name="author" content="MaxDevNix">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/nix-package-manager/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/nix-package-manager/">
+  <meta property="og:site_name" content="MaxDev&#39;s Blog">
+  <meta property="og:title" content="Nix Package Manager">
+  <meta property="og:description" content="This is a standalone package manager, that, by default, is bundled with NixOS. I learned about it from ChrisTitusTech’s YouTube and Vlog It has one of the largest repositories (120 000&#43; packages) that has both free and open-source as well as proprietary software that is pretty up to date.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-17T07:58:35+01:00">
+    <meta property="article:modified_time" content="2025-03-17T07:58:35+01:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="PackageManager">
+    <meta property="article:tag" content="Nix">
+    <meta property="article:tag" content="Errors Fixes">
+
+  <meta itemprop="name" content="Nix Package Manager">
+  <meta itemprop="description" content="This is a standalone package manager, that, by default, is bundled with NixOS. I learned about it from ChrisTitusTech’s YouTube and Vlog It has one of the largest repositories (120 000&#43; packages) that has both free and open-source as well as proprietary software that is pretty up to date.">
+  <meta itemprop="datePublished" content="2025-03-17T07:58:35+01:00">
+  <meta itemprop="dateModified" content="2025-03-17T07:58:35+01:00">
+  <meta itemprop="wordCount" content="628">
+  <meta itemprop="keywords" content="Linux,PackageManager,Nix,Errors Fixes">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Nix Package Manager">
+  <meta name="twitter:description" content="This is a standalone package manager, that, by default, is bundled with NixOS. I learned about it from ChrisTitusTech’s YouTube and Vlog It has one of the largest repositories (120 000&#43; packages) that has both free and open-source as well as proprietary software that is pretty up to date.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        MaxDev&#39;s Blog
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Nix Package Manager</h1>
+      
+      <p class="tracked"><strong>MaxDevNix</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2025-03-17T07:58:35+01:00">March 17, 2025</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><!--This is a package manager with one of the largest repositories
+(80 000+ packages), that can be installed on most distros.-->
+<p>This is a standalone package manager,
+that, by default, is bundled with NixOS.
+I learned about it from ChrisTitusTech&rsquo;s
+<a href="https://youtube.com/watch?v=Ty8C2B910EI">YouTube</a> and
+<a href="https://christitus.com/nix-package-manager">Vlog</a>
+It has one of the largest <a href="https://github.com/nixos/nixpkgs">repositories</a>
+(<a href="https://repology.org/repository/nix_unstable">120 000+ packages</a>)
+that has both free and open-source as well as proprietary software
+that is pretty up to date.</p>
+<h2 id="installation">Installation</h2>
+<p>Sources:</p>
+<ul>
+<li>Official Website:
+<ul>
+<li><a href="https://nixos.org/download">https://nixos.org/download</a></li>
+<li><a href="https://nix.dev/install-nix">https://nix.dev/install-nix</a></li>
+</ul>
+</li>
+<li>GitHub Repository: <a href="https://github.com/NixOS/nix">https://github.com/NixOS/nix</a></li>
+</ul>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 344 25"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>u</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>-</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>L</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>:</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>g</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='248' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='264' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='272' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='280' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='288' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>|</text>
+<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>h</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>Arch Linux (Pacman)
+<code> pacman -Sy nix</code></p>
+<h3 id="verify-installation">Verify Installation</h3>
+<p>Check if installation was successful by opening a terminal and typing:</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 112 25"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 32,0 L 40,0' fill='none' stroke='currentColor'></path>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>v</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>n</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>Output should be</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 208 25"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>(</text>
+<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>N</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>)</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>{</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>v</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>X</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>Y</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>Z</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>}</text>
+</g>
+
+    </svg>
+  
+</div>
+<h2 id="installing-of-packages-from-nix-repository">Installing of packages from nix repository</h2>
+<!-- https://stop-using-nix-env.privatevoid.net/ -->
+<h3 id="trying-packages-before-installing-them">Trying packages before installing them</h3>
+<!-- https://nix.dev/tutorials/first-steps/ad-hoc-shell-environments.html -->
+<p>Nix package manager has a nice feature, that allows</p>
+<h2 id="help">Help</h2>
+<ul>
+<li>Official Website
+<ul>
+<li><a href="https://nixos.org/">https://nixos.org/</a></li>
+<li><a href="https://nix.dev/">https://nix.dev/</a></li>
+</ul>
+</li>
+<li>Github
+<ul>
+<li><a href="https://github.com/NixOS/">https://github.com/NixOS/</a></li>
+</ul>
+</li>
+<li>Reddit
+<ul>
+<li><a href="https://reddit.com/r/Nix/">https://reddit.com/r/Nix/</a></li>
+<li><a href="https://reddit.com/r/NixOS/">https://reddit.com/r/NixOS/</a></li>
+</ul>
+</li>
+<li>ManPages
+<ul>
+<li>nix</li>
+<li>nix-env</li>
+<li>nix-store</li>
+<li>nix-shell</li>
+<li>nix-channel</li>
+</ul>
+</li>
+</ul>
+<h3 id="command-cheatsheet">Command Cheatsheet</h3>
+<ul>
+<li>Base Command: nix-env
+<ul>
+<li><code>-i , --install {package}</code></li>
+<li><code>-iA, --install --attrib nixpkgs.{package}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="troubleshooting">Troubleshooting:</h3>
+<h4 id="error-programs-not-showing-up-in-start-menu">Error: Programs not showing up in start menu</h4>
+<p>NIX stores all .desktop files (icons for apps used by the start menu) in
+/home/$USER/.nix-profile/share/applications, but start menus usually read from
+/home/$USER/.local/share/applications.</p>
+<h4 id="solution">Solution</h4>
+<p>Make symlinks in /home/$USER/.local/share/applications pointing to
+/home/$USER/.nix-profile/share/applications</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 736 25"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>-</text>
+<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>U</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>-</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>f</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='248' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='264' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='272' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='280' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='288' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='296' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='312' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='336' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='344' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='352' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='360' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='368' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='376' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='384' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='392' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='400' y='4' fill='currentColor' style='font-size:1em'>*</text>
+<text text-anchor='middle' x='416' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='424' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>U</text>
+<text text-anchor='middle' x='480' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='488' y='4' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='496' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='504' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='512' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='520' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='528' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='536' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='544' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='552' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='560' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='568' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='576' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='584' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='592' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='600' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='608' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='616' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='624' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='632' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='640' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='648' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='656' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='664' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='672' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='680' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='688' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='696' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='704' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='712' y='4' fill='currentColor' style='font-size:1em'>/</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>If that doesn&rsquo;t work, copy the files from /home/$USER/.nix-profile/share/applications
+to /home/$USER/.local/share/applications</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 728 25"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 24,0 L 32,0' fill='none' stroke='currentColor'></path>
+<polygon points='40.000000,0.000000 28.000000,-5.600000 28.000000,5.600000' fill='currentColor' transform='rotate(90.000000, 32.000000, 0.000000)'></polygon>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='48' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>U</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>-</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>f</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='248' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='264' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='272' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='280' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='288' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='296' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='312' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='336' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='344' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='352' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='360' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='368' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='376' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='384' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='392' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='400' y='4' fill='currentColor' style='font-size:1em'>*</text>
+<text text-anchor='middle' x='416' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='424' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>m</text>
+<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>U</text>
+<text text-anchor='middle' x='480' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='488' y='4' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='496' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='504' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='512' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='520' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='528' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='536' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='544' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='552' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='560' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='568' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='576' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='584' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='592' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='600' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='608' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='616' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='624' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='632' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='640' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='648' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='656' y='4' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='664' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='672' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='680' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='688' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='696' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='704' y='4' fill='currentColor' style='font-size:1em'>s</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>Another method you can try, is adding $HOME/.nix-profile/share to $XDG_DATA_DIRS like this</p>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 488 25"
+      >
+      <g transform='translate(8,16)'>
+<text text-anchor='middle' x='0' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='8' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='16' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='24' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='32' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='40' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='56' y='4' fill='currentColor' style='font-size:1em'>X</text>
+<text text-anchor='middle' x='64' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='72' y='4' fill='currentColor' style='font-size:1em'>G</text>
+<text text-anchor='middle' x='80' y='4' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='88' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='96' y='4' fill='currentColor' style='font-size:1em'>A</text>
+<text text-anchor='middle' x='104' y='4' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='112' y='4' fill='currentColor' style='font-size:1em'>A</text>
+<text text-anchor='middle' x='120' y='4' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>S</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>=</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>H</text>
+<text text-anchor='middle' x='184' y='4' fill='currentColor' style='font-size:1em'>O</text>
+<text text-anchor='middle' x='192' y='4' fill='currentColor' style='font-size:1em'>M</text>
+<text text-anchor='middle' x='200' y='4' fill='currentColor' style='font-size:1em'>E</text>
+<text text-anchor='middle' x='208' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='216' y='4' fill='currentColor' style='font-size:1em'>.</text>
+<text text-anchor='middle' x='224' y='4' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='232' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='240' y='4' fill='currentColor' style='font-size:1em'>x</text>
+<text text-anchor='middle' x='248' y='4' fill='currentColor' style='font-size:1em'>-</text>
+<text text-anchor='middle' x='256' y='4' fill='currentColor' style='font-size:1em'>p</text>
+<text text-anchor='middle' x='264' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='272' y='4' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='280' y='4' fill='currentColor' style='font-size:1em'>f</text>
+<text text-anchor='middle' x='288' y='4' fill='currentColor' style='font-size:1em'>i</text>
+<text text-anchor='middle' x='296' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='304' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='312' y='4' fill='currentColor' style='font-size:1em'>/</text>
+<text text-anchor='middle' x='320' y='4' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='328' y='4' fill='currentColor' style='font-size:1em'>h</text>
+<text text-anchor='middle' x='336' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='344' y='4' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='352' y='4' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='360' y='4' fill='currentColor' style='font-size:1em'>:</text>
+<text text-anchor='middle' x='368' y='4' fill='currentColor' style='font-size:1em'>$</text>
+<text text-anchor='middle' x='376' y='4' fill='currentColor' style='font-size:1em'>X</text>
+<text text-anchor='middle' x='384' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='392' y='4' fill='currentColor' style='font-size:1em'>G</text>
+<text text-anchor='middle' x='400' y='4' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='408' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='416' y='4' fill='currentColor' style='font-size:1em'>A</text>
+<text text-anchor='middle' x='424' y='4' fill='currentColor' style='font-size:1em'>T</text>
+<text text-anchor='middle' x='432' y='4' fill='currentColor' style='font-size:1em'>A</text>
+<text text-anchor='middle' x='440' y='4' fill='currentColor' style='font-size:1em'>_</text>
+<text text-anchor='middle' x='448' y='4' fill='currentColor' style='font-size:1em'>D</text>
+<text text-anchor='middle' x='456' y='4' fill='currentColor' style='font-size:1em'>I</text>
+<text text-anchor='middle' x='464' y='4' fill='currentColor' style='font-size:1em'>R</text>
+<text text-anchor='middle' x='472' y='4' fill='currentColor' style='font-size:1em'>S</text>
+</g>
+
+    </svg>
+  
+</div>
+<h4 id="error-unable-to-build-profile-there-is-a-conflict-for-the-following-files">Error: unable to build profile. There is a conflict for the following files:</h4>
+<h4 id="solution-1">Solution:</h4>
+<p>There is no solution, as far as i have found, that would reliably do that.
+If you have found something, please post it as a pull request updating this file
+on (git{page})[https://git{page}/{user}/{repo}/content/posts/nix-package-manager
+with an accompanying sources and photos/video of the successful operation (recommended).</p>
+<h4 id="error-profile-profile-path-is-incompatible-with-nix-env-please-use-nix-profile-instead">Error: profile &lsquo;{profile path}&rsquo; is incompatible with &rsquo;nix-env&rsquo;: please use &rsquo;nix profile&rsquo; instead</h4>
+<h4 id="solution-2">Solution</h4>
+<p>There is no solution, as far as i have found, that would reliably do that.
+If you have found something, please post it as a pull request updating this file
+on (git{page})[https://git{page}/{user}/{repo}/content/posts/nix-package-manager
+with an accompanying sources and photos/video of the successful operation (recommended).</p>
+<h4 id="error-when-installing-ghostty-with-nix-env--ia-nixpkgsghostty-or-nix-profile-install-ghostty-or-nix-profile-install-nixpkgsghostty-">Error: when installing ghostty with <code>nix-env -iA nixpkgs.ghostty</code> or <code>nix profile install ghostty</code> or <code>nix profile install nixpkgs#ghostty</code> &hellip;</h4>
+<h3 id="uninstalling-nix-package-manager">Uninstalling Nix Package Manager</h3>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/linux/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Linux</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/packagemanager/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">PackageManager</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/nix/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Nix</a>
+   </li>
+  
+   <li class="list di">
+     <a href="/tags/errors-fixes/" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">Errors Fixes</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/pavu-control/">PAVU Control</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  MaxDev's Blog 2025 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

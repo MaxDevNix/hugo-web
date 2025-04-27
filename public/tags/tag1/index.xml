@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{Tag1} on MaxDev&#39;s Blog</title>
+    <link>http://localhost:1313/tags/tag1/</link>
+    <description>Recent content in {Tag1} on MaxDev&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 16 Apr 2025 19:15:46 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/test/</link>
+      <pubDate>Wed, 16 Apr 2025 19:15:46 +0200</pubDate>
+      <guid>http://localhost:1313/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Awesome WM</title>
+      <link>http://localhost:1313/posts/awesomewm/</link>
+      <pubDate>Thu, 10 Apr 2025 13:04:52 +0200</pubDate>
+      <guid>http://localhost:1313/posts/awesomewm/</guid>
+      <description>&lt;p&gt;Awesome Window Manager is a Window Manager for Linux-based systems,&#xA;based on DWM and configured in Lua,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

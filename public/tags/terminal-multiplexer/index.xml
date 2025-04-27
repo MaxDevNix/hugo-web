@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal Multiplexer on MaxDev&#39;s Blog</title>
+    <link>http://localhost:1313/tags/terminal-multiplexer/</link>
+    <description>Recent content in Terminal Multiplexer on MaxDev&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Apr 2025 20:12:21 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/terminal-multiplexer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zellij</title>
+      <link>http://localhost:1313/posts/zellij/</link>
+      <pubDate>Tue, 01 Apr 2025 20:12:21 +0200</pubDate>
+      <guid>http://localhost:1313/posts/zellij/</guid>
+      <description>&lt;p&gt;Zellij is a relatively new terminal multiplexer, that is designed to be&#xA;easy for beginners to understand and use, &lt;!--but is a little graphically bloated by default.--&gt;&#xA;while still being very configurable&#xA;and full of features more experienced users will appreciate.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
