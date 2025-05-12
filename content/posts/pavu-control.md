@@ -2,18 +2,13 @@
 title = "PAVU Control"
 date = "2025-03-17T07:51:26+01:00"
 tags = [ "Linux", "Sound", "PulseAudio", "Errors Fixes", ]
-draft = true
+draft = false
 +++
 
-<!--This is a guide to fix error when Pavucontrol is first started.-->
 PAVU Control (PulseAudioVolume Control), is a GUI front-end utility for pulseaudio sound server/daemon.
 
 <!--more-->
 
-<!--## Error-->
-<!--1. Connection to PulseAudio failed-->
-<!--Happens, when you install and first start up PAVUControl.-->
-<!---->
 <!--## Fixes-->
 <!--- Restart PulseAudio-->
 <!--    ``` console-->

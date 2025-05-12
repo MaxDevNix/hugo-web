@@ -34,7 +34,7 @@
       <link>http://localhost:1313/posts/pavu-control/</link>
       <pubDate>Mon, 17 Mar 2025 07:51:26 +0100</pubDate>
       <guid>http://localhost:1313/posts/pavu-control/</guid>
-      <description>&lt;!--This is a guide to fix error when Pavucontrol is first started.--&gt;&#xA;&lt;p&gt;PAVU Control (PulseAudioVolume Control), is a GUI front-end utility for pulseaudio sound server/daemon.&lt;/p&gt;</description>
+      <description>&lt;p&gt;PAVU Control (PulseAudioVolume Control), is a GUI front-end utility for pulseaudio sound server/daemon.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
