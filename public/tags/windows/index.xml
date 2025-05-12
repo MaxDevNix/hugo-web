@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/ntfs/</link>
       <pubDate>Wed, 02 Apr 2025 10:36:37 +0200</pubDate>
       <guid>http://localhost:1313/posts/ntfs/</guid>
-      <description>&lt;p&gt;NTFS, officially NT File System but commonly called New Technology File System,&#xA;is a Microsoft filesystem that has been the default on windows since Windows NT 3.1.&#xA;Support for NTFS has been incorporated into the Linux kernel in version X.X.X in YYYY.&lt;/p&gt;</description>
+      <description>&lt;p&gt;NTFS, officially NT File System but commonly called New Technology File System,&#xA;is a Microsoft filesystem that has been the default on Windows since Windows NT 3.1.&#xA;Support for NTFS has been incorporated into the Linux kernel in version 5.15.0 in 31.10.2021.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

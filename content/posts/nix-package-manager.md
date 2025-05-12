@@ -1,7 +1,7 @@
 +++
 title = "Nix Package Manager"
 date = "2025-03-17T07:58:35+01:00"
-tags = ["Linux", "PackageManager", "Nix", "Errors Fixes", ]
+tags = ["Linux", "Package Manager", "Nix", "Errors Fixes", ]
 draft = true
 +++
 

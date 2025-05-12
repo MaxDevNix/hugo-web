@@ -5,7 +5,7 @@ tags = ["Terminal", "CLI", "Linux", "Terminal Multiplexer", ]
 draft = true
 +++
 
-Zellij is a relatively new terminal multiplexer, that is designed to be
+[Zellij](https://zellij.dev) is a relatively new terminal multiplexer, that is designed to be
 easy for beginners to understand and use, <!--but is a little graphically bloated by default.-->
 while still being very configurable
 and full of features more experienced users will appreciate.
@@ -16,7 +16,7 @@ One of the things that make zellij interesting, is the ability to try it in your
 ## Features
 It has panes, tabs and sessions (like TMUX), and has native session resurrection capabilities.
 ## Configuration
-The configuration is stored in $XDG_CONF_HOME/zellij/config.kdl with language KDL.
+The configuration is stored in $XDG_CONF_HOME/zellij/config.kdl with language [KDL](https://kdl.dev).
 
 
 <!--end-->

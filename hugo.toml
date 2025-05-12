@@ -31,7 +31,7 @@ subtitle = ""
 defaultTheme = "dark"
 search = true
 author = "MaxDevNix"
-description = "{desc}"
+description = "My blog about fixing various errors i encountered throught my journey with Linux"
 mainSections = ["posts"]
 header_search_layout = "expanded"
 menu_align = "center"
@@ -47,3 +47,7 @@ disableClasses = false
 disableIDs = false
 disableTags = false
 enable = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

@@ -20,14 +20,14 @@
       <link>http://localhost:1313/posts/ntfs/</link>
       <pubDate>Wed, 02 Apr 2025 10:36:37 +0200</pubDate>
       <guid>http://localhost:1313/posts/ntfs/</guid>
-      <description>&lt;p&gt;NTFS, officially NT File System but commonly called New Technology File System,&#xA;is a Microsoft filesystem that has been the default on windows since Windows NT 3.1.&#xA;Support for NTFS has been incorporated into the Linux kernel in version 5.15.0 in 31.10.2021.&lt;/p&gt;</description>
+      <description>&lt;p&gt;NTFS, officially NT File System but commonly called New Technology File System,&#xA;is a Microsoft filesystem that has been the default on Windows since Windows NT 3.1.&#xA;Support for NTFS has been incorporated into the Linux kernel in version 5.15.0 in 31.10.2021.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zellij</title>
       <link>http://localhost:1313/posts/zellij/</link>
       <pubDate>Tue, 01 Apr 2025 20:12:21 +0200</pubDate>
       <guid>http://localhost:1313/posts/zellij/</guid>
-      <description>&lt;p&gt;Zellij is a relatively new terminal multiplexer, that is designed to be&#xA;easy for beginners to understand and use, &lt;!--but is a little graphically bloated by default.--&gt;&#xA;while still being very configurable&#xA;and full of features more experienced users will appreciate.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://zellij.dev&#34;&gt;Zellij&lt;/a&gt; is a relatively new terminal multiplexer, that is designed to be&#xA;easy for beginners to understand and use, &lt;!--but is a little graphically bloated by default.--&gt;&#xA;while still being very configurable&#xA;and full of features more experienced users will appreciate.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nix Package Manager</title>
