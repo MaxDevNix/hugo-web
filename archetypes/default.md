@@ -8,6 +8,11 @@ draft = true
 
 <!--more-->
 
+## Troubleshooting
+### Error:
+### {Error message}
+### Fix/Solution
+### Explanation
 
 
 <!--end-->
