@@ -16,7 +16,7 @@ I learned about it from ChrisTitusTech's
 It has one of the largest [repositories](https://github.com/nixos/nixpkgs)
 ([120 000+ packages](https://repology.org/repository/nix_unstable))
 that has both free and open-source as well as proprietary software
-that is pretty up to date.
+that is up to date.
 
 ## Installation
 Sources:
@@ -24,30 +24,35 @@ Sources:
     - https://nixos.org/download
     - https://nix.dev/install-nix
 - GitHub Repository: https://github.com/NixOS/nix
-
-```
+```shell
 curl -L https://nixos.org/nix/install | sh
 ```
-
 Arch Linux (Pacman)
-``` pacman -Sy nix```
+```shell
+pacman -Sy nix
+```
 
 ### Verify Installation
 Check if installation was successful by opening a terminal and typing:
-```
+```shell
 nix --version
 ```
 Output should be
-```
+```sh
 nix (Nix) {version X.Y.Z}
 ```
-
 ## Installing of packages from nix repository
 <!-- https://stop-using-nix-env.privatevoid.net/ -->
 
+
 ### Trying packages before installing them
 <!-- https://nix.dev/tutorials/first-steps/ad-hoc-shell-environments.html -->
-Nix package manager has a nice feature, that allows
+Nix package manager has a nice feature, that allows you to try packages in an
+ephemeral shell before installing them.
+Try it with this command:
+```shell
+nix-shell -p {package name}
+```
 
 ## Help
 - Official Website
@@ -67,12 +72,13 @@ Nix package manager has a nice feature, that allows
 
 ### Command Cheatsheet
 - Base Command: nix-env
-    - ``` -i , --install {package} ``` 
-    - ``` -iA, --install --attrib nixpkgs.{package} ```
+    - ` -i , --install {package}` install package
+    - ` -iA, --install --attrib nixpkgs.{package}` install package from attribute nixpkgs
+    - `-q, --query {optional package name}` list packages installed with nix
 
 ### Troubleshooting:
 
-#### Error: Programs not showing up in start menu
+#### Error: Programs not showing up in start menu/desktop
 NIX stores all .desktop files (icons for apps used by the start menu) in
 /home/$USER/.nix-profile/share/applications, but start menus usually read from
 /home/$USER/.local/share/applications.
@@ -80,28 +86,29 @@ NIX stores all .desktop files (icons for apps used by the start menu) in
 #### Solution
 Make symlinks in /home/$USER/.local/share/applications pointing to
 /home/$USER/.nix-profile/share/applications
-```
+```shell
 ls -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ 
 ```
 
 If that doesn't work, copy the files from /home/$USER/.nix-profile/share/applications
 to /home/$USER/.local/share/applications
-```
+```shell
 cp -v /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications 
 ```
 
-Another method you can try, is adding $HOME/.nix-profile/share to $XDG_DATA_DIRS like this
-```
+Another method you can try, is adding [$HOME/.nix-profile/share to $XDG_DATA_DIRS](https://wiki.archlinux.org/title/Nix#Desktop_integration) like this
+```shell
 export XDG_DATA_DIRS=$HOME/.nix-profile/share:$XDG_DATA_DIRS
 ```
 
 
 #### Error: unable to build profile. There is a conflict for the following files:
+#### {list of files}
 
 #### Solution:
 There is no solution, as far as i have found, that would reliably do that. 
 If you have found something, please post it as a pull request updating this file
-on (git{page})[https://git{page}/{user}/{repo}/content/posts/nix-package-manager
+on (github/maxdevnix/hugo-web)[https://github.com/maxdevnix/hugo-web/content/posts/nix-package-manager
 with an accompanying sources and photos/video of the successful operation (recommended).
 
 #### Error: profile '{profile path}' is incompatible with 'nix-env': please use 'nix profile' instead
@@ -109,10 +116,10 @@ with an accompanying sources and photos/video of the successful operation (recom
 #### Solution
 There is no solution, as far as i have found, that would reliably do that. 
 If you have found something, please post it as a pull request updating this file
-on (git{page})[https://git{page}/{user}/{repo}/content/posts/nix-package-manager
+on (github/maxdevnix/hugo-web)[https://github.com/maxdevnix/hugo-web/content/posts/nix-package-manager
 with an accompanying sources and photos/video of the successful operation (recommended).
 
 
-#### Error: when installing ghostty with `nix-env -iA nixpkgs.ghostty` or `nix profile install ghostty` or `nix profile install nixpkgs#ghostty` ...
+#### Error: when installing ghostty with `nix-env -iA nixpkgs.ghostty`/`nix profile install ghostty`/`nix profile install nixpkgs#ghostty`
 
 ### Uninstalling Nix Package Manager
