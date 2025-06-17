@@ -1,5 +1,5 @@
-baseURL = 'https://example.org/'
-# baseURL = 'https://maxdevnix.github.io'
+# baseURL = 'https://example.org/'
+baseURL = 'https://maxdevnix.github.io/hugo-web'
 languageCode = 'en-us'
 title = "MaxDev's Blog"
 # theme = "lugo"
