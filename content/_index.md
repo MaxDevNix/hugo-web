@@ -20,5 +20,5 @@ ads nor sponsored content.
 <!--    the website and there would be only images, normal links and static text, not videos nor -->
 <!--    tracking links, for conserving bandwidth, and preserving privacy. -->
 <!-- 2. Donations, using only privacy-preserving platforms/methods. -->
-
+<!-- and i will add it to this website's privacy policy -->
 <!--end-->
