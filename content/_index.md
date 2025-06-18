@@ -14,10 +14,11 @@ website was made with [HUGO](https://gohugo.io), and currently does not have
 ads nor sponsored content.
 <!-- If I would want to monetize this website, i would do -->
 <!-- so with: -->
-<!-- If x, I would -->
+
+<!-- If, in the future, I decide that I will monetize this website, I will do so with: -->
 <!-- 1. Sponsorships, that I would choose, and they would be on the side/bottom of -->
-<!--    the website and there would be only images and static text, not videos nor -->
-<!--    tracking links, for conserving bandwidth. -->
+<!--    the website and there would be only images, normal links and static text, not videos nor -->
+<!--    tracking links, for conserving bandwidth, and preserving privacy. -->
 <!-- 2. Donations, using only privacy-preserving platforms/methods. -->
 
 <!--end-->
