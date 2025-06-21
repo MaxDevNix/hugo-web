@@ -10,8 +10,9 @@ featured_image = "nix.png"
 <!--This is a package manager with one of the largest repositories
 (80 000+ packages), that can be installed on most distros.-->
 
-This is a standalone package manager,
-that, by default, is bundled with NixOS.
+[Nix](https://nixos.org) is a standalone package manager,
+<!-- that, by default, is bundled with NixOS. -->
+that is the default package manager for NixOS.
 I learned about it from ChrisTitusTech's
 [YouTube](https://youtube.com/watch?v=Ty8C2B910EI) and
 [Vlog](https://christitus.com/nix-package-manager)
@@ -123,7 +124,7 @@ $ export XDG_DATA_DIRS=$HOME/.nix-profile/share:$XDG_DATA_DIRS
 #### Solution:
 There is no solution, as far as i have found, that would reliably do that. 
 If you have found something, please post it as a pull request updating this file
-on (github/maxdevnix/hugo-web)[https://github.com/maxdevnix/hugo-web/content/posts/nix-package-manager
+on [github/maxdevnix/hugo-web](https://github.com/MaxDevNix/hugo-web/blob/main/content/posts/nix-package-manager.md)
 with an accompanying sources and photos/video of the successful operation (recommended).
 
 #### Error: profile '{profile path}' is incompatible with 'nix-env': please use 'nix profile' instead
@@ -131,10 +132,11 @@ with an accompanying sources and photos/video of the successful operation (recom
 #### Solution
 There is no solution, as far as i have found, that would reliably do that. 
 If you have found something, please post it as a pull request updating this file
-on (github/maxdevnix/hugo-web)[https://github.com/maxdevnix/hugo-web/content/posts/nix-package-manager
+on [github/maxdevnix/hugo-web](https://github.com/MaxDevNix/hugo-web/blob/main/content/posts/nix-package-manager.md)
 with an accompanying sources and photos/video of the successful operation (recommended).
 
 
 #### Error: when installing `ghostty` terminal with `nix-env -iA nixpkgs.ghostty`/`nix profile install ghostty`/`nix profile install nixpkgs#ghostty`
 
 ### Uninstalling Nix Package Manager
+<!-- NUKE your OS with `sudo rm -rf /`. -->
