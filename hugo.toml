@@ -9,6 +9,7 @@ summaryLength = "10"
   disableAliases = true
   pagerSize = 10
   path = 'page'
+  paginate = 10
 
 [outputs]
 home = ["HTML", "AMP", "RSS", "JSON"]
@@ -27,16 +28,10 @@ tabWidth = 8
 noClasses = false
 
 [params]
-subtitle = ""
 defaultTheme = "dark"
 search = true
 author = "MaxDevNix"
-description = "My blog about fixing various errors i encountered throught my journey with Linux"
-mainSections = ["posts"]
-header_search_layout = "expanded"
-menu_align = "center"
-sidebar = "right"
-code_copy_button = true
+description = "Blog about fixing various errors I encountered throughout my journey with Linux "
 
 [params.contact]
 email = "maxik.falb@gmail.com"
