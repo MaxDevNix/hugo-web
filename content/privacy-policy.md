@@ -5,9 +5,9 @@ tags = ['Privacy', 'Legal Documents']
 draft = false
 +++
 
-This is privacy policy of https://{mywebsitedomain}.com
+This is privacy policy of https://maxdevnix.github.io/hugo-web
 <!--more-->
-{name} operates the https://{websiteurl}.com website, which provides the SERVICE.
+MaxDevNix operates the https://maxdevnix.github.io/hugo-web website, which provides the SERVICE.
 
 This page is used to inform website visitors regarding our policies with the
 collection, use, and disclosure of Personal Information if anyone decided to use
@@ -23,7 +23,7 @@ described in this Privacy Policy.
 ## Log Data
 ## Cookies
 
-# Changed to This Privacy Policy
+# Changes to this Privacy Policy
 # Contact Us
 
 <!--end-->
