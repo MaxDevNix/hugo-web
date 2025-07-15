@@ -21,4 +21,6 @@ ads nor sponsored content.
 <!--    tracking links, for conserving bandwidth, and preserving privacy. -->
 <!-- 2. Donations, using only privacy-preserving platforms/methods. -->
 <!-- and i will add it to this website's privacy policy -->
+<!-- 3. Subscriptions, using the same services as for donations, -->
+<!-- and the content will be later (1 month later) released for people without subscription -->
 <!--end-->
