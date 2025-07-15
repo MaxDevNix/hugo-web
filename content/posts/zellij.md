@@ -13,6 +13,12 @@ and full of features more experienced users will appreciate.
 
 ## Installation
 One of the things that make zellij interesting, is the ability to try it in your shell before installing it.
+```bash
+$ bash <(curl -L https://zellij.dev/launch)
+```
+```fish
+$ bash (curl -L https://zellij.dev/launch | psub)
+```
 ## Features
 It has panes, tabs and sessions (like TMUX), and has native session resurrection capabilities.
 ## Configuration
