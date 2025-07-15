@@ -7,7 +7,6 @@ draft = true
 
 [Zellij](https://zellij.dev) is a relatively new terminal multiplexer, that is designed to be
 easy for beginners to understand and use, <!--but is a little graphically bloated by default.-->
-while still being very configurable
 while being very configurable
 and full of features more experienced users will appreciate.
 <!--more-->
