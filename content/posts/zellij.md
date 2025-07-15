@@ -17,6 +17,7 @@ One of the things that make zellij interesting, is the ability to try it in your
 It has panes, tabs and sessions (like TMUX), and has native session resurrection capabilities.
 ## Configuration
 The configuration is stored in $XDG_CONF_HOME/zellij/config.kdl with language [KDL](https://kdl.dev).
+The configuration is stored in `$XDG_CONF_HOME/zellij/config.kdl` with language [KDL](https://kdl.dev).
 
 
 <!--end-->
