@@ -87,8 +87,8 @@ $ nix-shell -p {package name}
 
 ### Command Cheatsheet
 - Base Command: nix-env
-    - ` -i , --install {package}` install package
-    - ` -iA, --install --attrib nixpkgs.{package}` install package from attribute "nixpkgs"
+    - `-i , --install {package}` install package
+    - `-iA, --install --attrib nixpkgs.{package}` install package from attribute "nixpkgs"
         [most people using nix<!--'s imperative...--> use this option, as it is faster, and less error prone](https://github.com/NixOS/nixpkgs/issues/38635#issuecomment-393657957), although it's a bit more verbose, which I don't like very much
     - `-q, --query {optional package name}` list packages installed with nix
 
