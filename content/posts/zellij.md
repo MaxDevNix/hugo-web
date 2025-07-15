@@ -28,7 +28,6 @@ $ bash (curl -L https://zellij.dev/launch | psub)
 - Built-in plugin manager
 - [Layouts](https://zellij.dev/documentation/layouts.html)
 ## Configuration
-The configuration is stored in $XDG_CONF_HOME/zellij/config.kdl with language [KDL](https://kdl.dev).
 The configuration is stored in `$XDG_CONF_HOME/zellij/config.kdl` with language [KDL](https://kdl.dev).
 
 
