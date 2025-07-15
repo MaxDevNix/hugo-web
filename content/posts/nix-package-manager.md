@@ -117,6 +117,9 @@ Another method you can try, is adding [$HOME/.nix-profile/share to $XDG_DATA_DIR
 $ export XDG_DATA_DIRS=$HOME/.nix-profile/share:$XDG_DATA_DIRS
 ```
 
+#### Error: Desktop Environment/Window Manager not showing up in the Login manager's menu
+
+#### Solution
 
 #### Error: unable to build profile. There is a conflict for the following files:
 #### {list of files}
