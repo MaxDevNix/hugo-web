@@ -12,6 +12,17 @@ I love Linux, and I made this site as a guide for people who
 use Linux and have problems with some applications/utilities not working. This
 website was made with [HUGO](https://gohugo.io), and currently does not have
 ads nor sponsored content.
+
+<!-- ## Website Monetization: -->
+<!-- 1. Donations: -->
+<!--     - Privacy-preserving platforms -->
+<!--     - Monero -->
+<!-- 2. Sponsorships: -->
+<!--     - Chosen after trying their product out without any special treatment. -->
+<!--     - Will not respond to emails and other messages trying to get me to sponsor their product/service. -->
+<!--     - Sponsorship segment will not be in article, it will always be on the side/bottom of the website. -->
+<!--     - Only text, images and normal links. (No videos nor tracking links, for preserving bandwidth and privacy) -->
+
 <!-- If I would want to monetize this website, i would do -->
 <!-- so with: -->
 
