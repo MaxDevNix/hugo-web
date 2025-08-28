@@ -15,8 +15,8 @@ ads nor sponsored content.
 
 <!-- ## Website Monetization: -->
 <!-- 1. Donations: -->
-<!--     - Privacy-preserving platforms -->
-<!--     - Monero -->
+<!--    - Privacy-preserving platforms -->
+<!--    - [Monero](https://www.getmonero.org/) -->
 <!-- 2. Sponsorships: -->
 <!--     - Chosen after trying their product out without any special treatment. -->
 <!--     - Will not respond to emails and other messages trying to get me to sponsor their product/service. -->
