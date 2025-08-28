@@ -22,6 +22,7 @@ ads nor sponsored content.
 <!--    - Will not respond to emails and other messages trying to get me to sponsor their product/service. -->
 <!--    - Sponsorship segment will not be in article, it will always be on the side/bottom of the website. -->
 <!--    - Only text, images and normal links. (No videos nor tracking links, for preserving bandwidth and privacy) -->
+<!--    - If i will make an article about sponsored content, it will be clearly labeled and tagged as such -->
 
 <!-- If I would want to monetize this website, i would do -->
 <!-- so with: -->
