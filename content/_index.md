@@ -9,7 +9,7 @@ draft = false
 
 Hello, I am Max.
 I love Linux, and I made this site as a guide for people who
-use Linux and have problems with some applications/utilities not working. This
+use or want to use Linux and have problems with some applications/utilities not working. This
 website was made with [HUGO](https://gohugo.io), and currently does not have
 ads nor sponsored content.
 
