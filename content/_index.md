@@ -19,8 +19,8 @@ ads nor sponsored content.
 <!--    - [Monero](https://www.getmonero.org/) -->
 <!-- 2. Sponsorships: -->
 <!--    - Chosen after extensively trying out their product without any special treatment (reduced/no cost, premium features/features not available for standard users/features not *yet* available for all users). -->
-<!--    - Will not respond to emails and other messages trying to get me to sponsor their product/service. -->
-<!--    - Sponsorship segment will not be in article, it will always be on the side/bottom of the website. -->
+<!--    - Will not respond to emails and other messages trying to get me to sponsor their product/service, for security reasons. -->
+<!--    - Sponsorship segment will not be in article, it will always be on the bottom of the article. -->
 <!--    - If I will make an article about sponsored content, it will be clearly labeled and tagged as such -->
 <!-- 3. Ads: -->
 <!--    - Contextual, NOT TARGETED/BEHAVIORAL Ads -->
