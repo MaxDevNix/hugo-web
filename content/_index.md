@@ -21,6 +21,9 @@ ads nor sponsored content.
 <!--    - Chosen after extensively trying out their product without any special treatment (reduced/no cost, premium features/features not available for standard users/features not *yet* available for all users). -->
 <!--    - Will not respond to emails and other messages trying to get me to sponsor their product/service. -->
 <!--    - Sponsorship segment will not be in article, it will always be on the side/bottom of the website. -->
+<!-- 3. Ads: -->
+<!--    - Contextual, NOT TARGETED/BEHAVIORAL Ads -->
+<!--    - Position on the bottom of the article -->
 <!--    - Only text, images and normal links. (No videos nor tracking links, for preserving bandwidth and privacy) -->
 <!--    - If i will make an article about sponsored content, it will be clearly labeled and tagged as such -->
 
