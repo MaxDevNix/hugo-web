@@ -1,7 +1,6 @@
 baseURL = 'https://maxdevnix.github.io/hugo-web'
 languageCode = 'en-us'
 title = "MaxDev's Blog"
-# theme = "lugo"
 theme = "ananke"
 summaryLength = "10"
 [pagination]
