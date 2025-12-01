@@ -3,7 +3,7 @@ baseURL = 'https://maxdevnix.github.io/hugo-web'
 languageCode = 'en-us'
 title = "MaxDev's Blog"
 # theme = "lugo"
-theme = "ananke"
+theme = "my-theme"
 summaryLength = "10"
 [pagination]
   disableAliases = true
