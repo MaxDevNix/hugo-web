@@ -59,7 +59,8 @@ $ nix (Nix) {version X.Y.Z}
 ```
 
 
-## Installing of packages from nix repository
+<!-- ## Installing of packages from nix repository -->
+## Package installation from `nixpkgs` repository
 <!-- https://stop-using-nix-env.privatevoid.net/ -->
 
 ### Trying packages before installing them
