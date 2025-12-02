@@ -103,19 +103,19 @@ $ nix-shell -p {package name}
 ### Troubleshooting:
 
 #### Error: Programs not showing up in start menu/desktop
-Nix stores all .desktop files (icons for apps used by the start menu) in
-/home/$USER/.nix-profile/share/applications, but start menus usually read from
-/home/$USER/.local/share/applications.
+Nix stores all `.desktop` files (icons for apps used by the start menu) in
+`/home/$USER/.nix-profile/share/applications`, but start menus usually read from
+`/home/$USER/.local/share/applications`.
 
 #### Solution
-Make symlinks in /home/$USER/.local/share/applications pointing to
-/home/$USER/.nix-profile/share/applications.
+Make symlinks in `/home/$USER/.local/share/applications` pointing to
+`/home/$USER/.nix-profile/share/applications`.
 ```sh
 $ ls -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ 
 ```
 
-If that doesn't work, copy the files from /home/$USER/.nix-profile/share/applications
-to /home/$USER/.local/share/applications.
+If that doesn't work, copy the files from `/home/$USER/.nix-profile/share/applications`
+to `/home/$USER/.local/share/applications`.
 ```sh
 $ cp -v /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications 
 ```
