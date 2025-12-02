@@ -29,7 +29,7 @@ noClasses = false
 defaultTheme = "dark"
 search = true
 author = "MaxDevNix"
-description = "Blog about fixing various errors I encountered throughout my journey with Linux "
+description = "Blog about fixing various errors I encountered throughout my journey with Linux."
 
 [params.contact]
 email = "maxik.falb@gmail.com"
