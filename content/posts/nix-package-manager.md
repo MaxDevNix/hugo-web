@@ -21,6 +21,7 @@ It has one of the largest [repositories](https://github.com/nixos/nixpkgs)
 that has both free and open-source as well as proprietary software
 that is up to date.
 
+
 ## Installation
 Sources:
 - Official Website:
@@ -56,9 +57,10 @@ Output should be
 ```sh
 $ nix (Nix) {version X.Y.Z}
 ```
+
+
 ## Installing of packages from nix repository
 <!-- https://stop-using-nix-env.privatevoid.net/ -->
-
 
 ### Trying packages before installing them
 <!-- https://nix.dev/tutorials/first-steps/ad-hoc-shell-environments.html -->
@@ -68,6 +70,7 @@ Try it with this command:
 ```sh
 $ nix-shell -p {package name}
 ```
+
 
 ## Help
 - Official Website
