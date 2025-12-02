@@ -109,13 +109,13 @@ Nix stores all .desktop files (icons for apps used by the start menu) in
 
 #### Solution
 Make symlinks in /home/$USER/.local/share/applications pointing to
-/home/$USER/.nix-profile/share/applications
+/home/$USER/.nix-profile/share/applications.
 ```sh
 $ ls -s /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications/ 
 ```
 
 If that doesn't work, copy the files from /home/$USER/.nix-profile/share/applications
-to /home/$USER/.local/share/applications
+to /home/$USER/.local/share/applications.
 ```sh
 $ cp -v /home/$USER/.nix-profile/share/applications/* /home/$USER/.local/share/applications 
 ```
