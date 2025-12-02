@@ -12,7 +12,7 @@ by clicking on the green button `Standalone Binary (.xz)`
 and extracted it with `tar xJvf ~/Download/node-$VERSION-linux-x64.tar.xz -C ~/.local/bin/node-$VERSION-linux-x64`
 
 ## Troubleshooting
-### Error: When I run `npm ...` (any argument)
+### Error: When I run `npm ...` (any argument), it throws an error message:
 ```javascript
 node:internal/modules/cjs/loader:1423
   throw err;
