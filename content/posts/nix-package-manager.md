@@ -61,7 +61,8 @@ $ nix (Nix) {version X.Y.Z}
 
 <!-- ## Installing of packages from nix repository -->
 ## Package installation from `nixpkgs` repository
-<!-- https://stop-using-nix-env.privatevoid.net/ -->
+Nix has multiple ways of installing packages. Probably the most well known is
+`$ nix-env -iA nixpkgs.{package}`. But using it [discouraged](https://stop-using-nix-env.privatevoid.net/).
 
 ### Trying packages before installing them
 <!-- https://nix.dev/tutorials/first-steps/ad-hoc-shell-environments.html -->
