@@ -1,7 +1,7 @@
 +++
 title = "Mount-Unmount-Issues"
 date = "2025-11-11T18:21:57+01:00"
-tags = ["{tag1}", ]
+tags = ["Linux", "Storage", "Errors Fixes", ]
 draft = true
 featured_image = "/thumbs/{year-image.png}"
 +++

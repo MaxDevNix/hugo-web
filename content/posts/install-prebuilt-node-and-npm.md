@@ -1,7 +1,7 @@
 +++
 title = "Installing prebuilt Node and NPM"
 date = "2025-11-01T19:05:19+01:00"
-tags = ["{tag1}", ]
+tags = ["Linux", "Dev", "Errors Fixes", ]
 draft = true
 featured_image = "/thumbs/{year-image.png}"
 +++
