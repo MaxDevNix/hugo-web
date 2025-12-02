@@ -103,7 +103,7 @@ $ nix-shell -p {package name}
 ### Troubleshooting:
 
 #### Error: Programs not showing up in start menu/desktop
-NIX stores all .desktop files (icons for apps used by the start menu) in
+Nix stores all .desktop files (icons for apps used by the start menu) in
 /home/$USER/.nix-profile/share/applications, but start menus usually read from
 /home/$USER/.local/share/applications.
 
