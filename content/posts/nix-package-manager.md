@@ -74,6 +74,9 @@ $ nix-shell -p {package name}
 ```
 
 
+## Configuration
+
+
 ## Help
 - Official Website
     - https://nixos.org/
