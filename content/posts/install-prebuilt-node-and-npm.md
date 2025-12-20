@@ -34,6 +34,8 @@ Error: Cannot find module '/home/$USER/.local/bin/node-v24.11.0-linux-x64/bin/no
 ### Node.js v24.11.0
 ### Could not determine Node.js install directory
 ### Fix/Solution
+`$PATH` must contain `/path/to/node-<VERSION>-linux-x64/bin`, but not `/path/to/node-v24.11.0-linux-x64/bin/node_modules/npm/bin`
+
 ### Explanation
 
 
