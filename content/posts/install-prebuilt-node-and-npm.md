@@ -30,9 +30,9 @@ Error: Cannot find module '/path/to/node-<VERSION>-linux-x64/bin/node_modules/np
   code: 'MODULE_NOT_FOUND',
   requireStack: []
 }
+Node.js <VERSION>
+Could not determine Node.js install directory
 ```
-### Node.js <VERSION>
-### Could not determine Node.js install directory
 ### Fix/Solution
 `$PATH` must contain `/path/to/node-<VERSION>-linux-x64/bin`, but not `/path/to/node-<VERSION>-linux-x64/bin/node_modules/npm/bin`
 
