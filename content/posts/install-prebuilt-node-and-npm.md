@@ -9,7 +9,7 @@ featured_image = "/thumbs/{year-image.png}"
 <!--more-->
 I have downloaded `node` and `npm` from [nodejs.org/en/download](https://nodejs.org/en/download)
 by clicking on the green button `Standalone Binary (.xz)`
-and extracted it with `tar xJvf ~/Download/node-$VERSION-linux-x64.tar.xz -C ~/.local/bin/node-$VERSION-linux-x64`
+and extracted it with `tar xJvf ~/Download/node-<VERSION>-linux-x64.tar.xz -C ~/.local/bin/node-<VERSION>-linux-x64`
 
 ## Troubleshooting
 ### Error: When I run `npm ...` (any argument), it throws an error message:
@@ -18,7 +18,7 @@ node:internal/modules/cjs/loader:1423
   throw err;
   ^
 
-Error: Cannot find module '/home/$USER/.local/bin/node-v24.11.0-linux-x64/bin/node_modules/npm/bin/npm-prefix.js'
+Error: Cannot find module '/path/to/node-<VERSION>-linux-x64/bin/node_modules/npm/bin/npm-prefix.js'
     at Module._resolveFilename (node:internal/modules/cjs/loader:1420:15)
     at defaultResolveImpl (node:internal/modules/cjs/loader:1058:19)
     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1063:22)
@@ -31,10 +31,10 @@ Error: Cannot find module '/home/$USER/.local/bin/node-v24.11.0-linux-x64/bin/no
   requireStack: []
 }
 ```
-### Node.js v24.11.0
+### Node.js <VERSION>
 ### Could not determine Node.js install directory
 ### Fix/Solution
-`$PATH` must contain `/path/to/node-<VERSION>-linux-x64/bin`, but not `/path/to/node-v24.11.0-linux-x64/bin/node_modules/npm/bin`
+`$PATH` must contain `/path/to/node-<VERSION>-linux-x64/bin`, but not `/path/to/node-<VERSION>-linux-x64/bin/node_modules/npm/bin`
 
 ### Explanation
 
