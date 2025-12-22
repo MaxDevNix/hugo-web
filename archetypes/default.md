@@ -24,7 +24,9 @@ featured_image = "/thumbs/{year-image.png}"
 
 ## Troubleshooting
 ### Error:
-### {Error message}
+```
+
+```
 ### Fix/Solution
 ### Explanation
 
