@@ -20,3 +20,21 @@ a {
   color: #00e;
   text-decoration: none;
 }
+
+/* User Added */
+code {
+    background-color: #333333;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+    padding: 3px 3px 3px;
+    white-space: nowrap;	
+}
+pre {
+    background-color: #333333;
+    color: #FFFFFF;
+    border-radius: 0.3em;
+    padding: 10px;
+}
+pre code {
+    white-space: pre-wrap;
+}
