@@ -11,10 +11,9 @@ tags = [
 "Terminal",
 "Terminal Multiplexer",
 "CLI",
-"{tag1}",
-"{tag1}",
-"{tag1}",
-"{tag1}",
+"Privacy",
+"Security",
+"{tag}",
 ]
 draft = true
 featured_image = "/thumbs/{year-image.png}"
